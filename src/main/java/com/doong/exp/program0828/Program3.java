@@ -1,4 +1,4 @@
-package com.doong.exp.prgram0828;
+package com.doong.exp.program0828;
 
 import java.util.Scanner;
 import java.util.function.BiFunction;

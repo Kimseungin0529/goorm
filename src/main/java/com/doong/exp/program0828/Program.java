@@ -1,4 +1,4 @@
-package com.doong.exp.prgram0828;
+package com.doong.exp.program0828;
 
 public class Program {
 
