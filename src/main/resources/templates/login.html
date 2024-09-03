@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Login</title>
+</head>
+<body>
+<h2>Login</h2>
+<div th:if="${loginError}">
+  <p style="color: red;">Invalid email or password. Please try again.</p>
+</div>
+<form th:action="@{/user/login}" method="post" th:object="${user}">
+  <table>
+    <tr>
+      <td>Email:</td>
+      <td><input type="text" th:field="*{email}" /></td>
+    </tr>
+    <tr>
+      <td>Password:</td>
+      <td><input type="password" th:field="*{password}" /></td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        <input type="submit" value="Login"/>
+      </td>
+    </tr>
+  </table>
+</form>
+</body>
+</html>
