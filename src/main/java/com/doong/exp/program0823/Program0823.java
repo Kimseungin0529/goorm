@@ -1,4 +1,4 @@
-package com.doong.exp;
+package com.doong.exp.program0823;
 
 import lombok.Getter;
 
