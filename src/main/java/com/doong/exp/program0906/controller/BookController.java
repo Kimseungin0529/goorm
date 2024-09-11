@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.net.URI;
+import java.time.LocalDate;
 import java.util.List;
 
 /**
@@ -66,8 +67,8 @@ public class BookController {
         Book createdBook = Book.builder()
                 .title(bookDto.getTitle())
                 .author(bookDto.getAuthor())
-                .genre(bookDto.getGenre())
-                .publishedYear(bookDto.getPublishedYear())
+                .publisher(bookDto.getPublisher())
+                .publishedDate(LocalDate.now())
                 .build();
 
         bookRepository.save(createdBook);

@@ -8,6 +8,7 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.time.LocalDate;
 import java.util.Objects;
 
 /**
@@ -34,39 +35,16 @@ public class Book {
     private Long id;
     private String title;
     private String author;
-    private int publishedYear;
-    private String genre;
+    private String publisher;
+    private LocalDate publishedDate;
+
 
     @Builder
-    public Book(String title, String author, int publishedYear, String genre) {
+    public Book(String title, String author, String publisher, LocalDate publishedDate) {
         this.title = title;
         this.author = author;
-        this.publishedYear = publishedYear;
-        this.genre = genre;
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Book book = (Book) o;
-        return publishedYear == book.publishedYear && Objects.equals(id, book.id) && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(genre, book.genre);
-    }
-
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, title, author, publishedYear, genre);
-    }
-
-    @Override
-    public String toString() {
-        return "Book{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", publishedYear=" + publishedYear +
-                ", genre='" + genre + '\'' +
-                '}';
+        this.publisher = publisher;
+        this.publishedDate = publishedDate;
     }
 
     public void updateTitle(String title){

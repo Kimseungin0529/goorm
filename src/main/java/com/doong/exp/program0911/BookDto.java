@@ -1,20 +1,17 @@
-package com.doong.exp.program0906.dto;
+package com.doong.exp.program0911;
 
-import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.time.LocalDate;
 
-@Getter
-@NoArgsConstructor
-@AllArgsConstructor
+@Data
 public class BookDto {
     private String id;
     private String title;
     private String author;
     private String publisher;
     private LocalDate publishedDate;
-    // 출판 연도, 장르는 걍 뻄;
-
 }
