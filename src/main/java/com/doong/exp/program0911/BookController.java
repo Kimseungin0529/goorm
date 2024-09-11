@@ -1,29 +1,37 @@
 package com.doong.exp.program0911;
 
+import com.doong.exp.program0906.service.BookService;
+import com.doong.exp.program0911.mybatis.BookServiceMyBatis;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
+import java.net.URI;
 
+/*
 @RestController
 @RequestMapping("/books")
 @RequiredArgsConstructor
 public class BookController {
 
+    //private final BookServiceMyBatis bookService;
     private final BookService bookService;
-
-    @GetMapping
-    public List<BookDto> getAllBooks() {
-        return bookService.getAllBooks();
+    @PutMapping("/{id}")
+    public ResponseEntity<?> updateBook(@PathVariable String id) {
+        bookService.updateBookcById(id);
+        return ResponseEntity.ok("정상적으로 변경됐습니다.");
     }
 
-    @GetMapping("/{id}")
-    public BookDto getBookById(@PathVariable String id) {
-        return bookService.getBookById(id);
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> deleteBookById(@PathVariable String id) {
+        bookService.getBookById(id);
+        return ResponseEntity.noContent().build();
     }
 
     @PostMapping
-    public void insertBook(@RequestBody BookDto book) {
-        bookService.insertBook(book);
+    public ResponseEntity<?> insertBook(@RequestBody BookDto book) {
+        Long createdBookId = bookService.insertBook(book);
+        URI uri = URI.create(String.format("/books/%d", createdBookId));
+        return ResponseEntity.created(uri).build();
     }
-}
+}*/

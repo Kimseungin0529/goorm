@@ -3,10 +3,7 @@ package com.doong.exp.program0906;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import lombok.AccessLevel;
-import lombok.Builder;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDate;
 import java.util.Objects;
@@ -28,7 +25,7 @@ import java.util.Objects;
  *     • 도서 삭제: DELETE /books/{id}
  * 5. Postman 사용하여 API 테스트 수행
  */
-@Entity @Getter
+@Entity @Getter @Setter
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 public class Book {
     @Id @GeneratedValue
