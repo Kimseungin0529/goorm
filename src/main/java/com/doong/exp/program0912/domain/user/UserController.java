@@ -1,4 +1,4 @@
-package com.doong.exp.program0912;
+package com.doong.exp.program0912.domain.user;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;

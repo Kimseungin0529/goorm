@@ -1,4 +1,4 @@
-package com.doong.exp.program0912;
+package com.doong.exp.program0912.domain.user;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
