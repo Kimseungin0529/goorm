@@ -1,4 +1,4 @@
-package com.doong.test;
+package com.doong.test.team;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 

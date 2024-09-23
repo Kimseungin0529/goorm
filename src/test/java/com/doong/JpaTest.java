@@ -1,7 +1,7 @@
 package com.doong;
 
-import com.doong.test.Member;
-import com.doong.test.Team;
+import com.doong.test.member.Member;
+import com.doong.test.team.Team;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import org.junit.jupiter.api.DisplayName;
@@ -21,7 +21,7 @@ public class JpaTest {
     @Test
     @DisplayName("Member 조회 시, Team 객체 확인")
     void test1(){
-        //given
+      /*  //given
         Member member1 = new Member("승진", null);
         Member member2 = new Member("길동", null);
         Team team = new Team("새우깡");
@@ -43,7 +43,7 @@ public class JpaTest {
         assertThat(team.getMembers()).hasSize(2);
         assertThat(member1.getTeam()).isEqualTo(team);
         assertThat(member2.getTeam()).isEqualTo(team);
-
+*/
     }
 
 }

@@ -1,5 +1,6 @@
-package com.doong.test;
+package com.doong.test.team;
 
+import com.doong.test.member.Member;
 import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
@@ -21,6 +22,6 @@ public class Team {
         this.title = title;
     }
 
-    @OneToMany(mappedBy = "team")
-    private List<Member> members = new ArrayList<>();
+    /*@OneToMany(mappedBy = "team")
+    private List<Member> members = new ArrayList<>();*/
 }
