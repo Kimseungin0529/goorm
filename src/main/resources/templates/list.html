@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Posts</title>
+</head>
+<body>
+<header>
+  <!-- 로그인된 사용자가 있는지 확인한 후, username을 표시 -->
+  <div th:if="${#authorization.expression('isAuthenticated()')}">
+    <p th:text="'Welcome, ' + ${#authentication.principal.username}">Welcome, Username</p>
+    <a href="/logout">Logout</a>
+  </div>
+  <!-- 비로그인 상태일 경우 -->
+  <div th:if="${!#authorization.expression('isAuthenticated()')}">
+    <p>Please log in</p>
+    <a href="/login">Login</a>
+  </div>
+</header>
+
+<h1>Posts</h1>
+<ul>
+  <li th:each="post : ${posts}">
+    <span th:text="${post.title}">Post Title</span>
+  </li>
+</ul>
+</body>
+</html>

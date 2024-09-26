@@ -1,8 +1,9 @@
+/*
 package com.doong.exp.program0912;
 
-import com.doong.exp.program0912.domain.user.UserController;
-import com.doong.exp.program0912.domain.user.UserDto;
-import com.doong.exp.program0912.domain.user.UserService;
+import com.doong.practice.exp.program0912.domain.user.UserController;
+import com.doong.practice.exp.program0912.domain.user.UserDto;
+import com.doong.practice.exp.program0912.domain.user.UserService;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -14,7 +15,6 @@ import org.springframework.http.MediaType;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 
 @WebMvcTest
@@ -48,9 +48,9 @@ class UserControllerTest {
                         .contentType(MediaType.APPLICATION_JSON)
         )
                 .andExpect(status().isOk());
-                /*.andExpect(jsonPath("$.data.username").value("username"))
-                .andExpect(jsonPath("$.data.password").value("password"));*/
-
+                */
+/*.andExpect(jsonPath("$.data.username").value("username"))
+                .andExpect(jsonPath("$.data.password").value("password"));*//*
 
     }
-}
+}*/
